@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package org.proto.example;
+
+option java_multiple_files = true;
+
+service MyGRPCService {
+  // Define a RPC method
+  rpc PerformOperation (PerformOperationRequest) returns (PerformOperationResponse);
+}
+
+// Define the request message
+message PerformOperationRequest {
+  string input_data = 1;
+}
+
+// Define the response message
+message PerformOperationResponse {
+  string result = 1;
+}
