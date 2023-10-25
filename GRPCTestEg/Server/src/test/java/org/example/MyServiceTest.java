@@ -38,4 +38,14 @@ public class MyServiceTest {
 
         assertEquals("Mocked Static Method", result);
     }
+     @Test
+    public void testFinalMethod(){
+        MyService mockFinal = mock(MyService.class);
+
+        PowerMockito.when(mockFinal.finalMethod()).thenReturn("Mocked Final Method");
+
+        String result = mockFinal.finalMethod();
+
+        assertEquals("Mocked Final Method",result);
+    }
 }
