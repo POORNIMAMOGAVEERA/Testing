@@ -19,4 +19,7 @@ public class MyService {
     private String privateMethod() {
         return "Private Method";
     }
+     public final String finalMethod(){
+        return "Final Method";
+    }
 }
